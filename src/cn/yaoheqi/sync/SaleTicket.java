@@ -27,10 +27,13 @@ public class SaleTicket {
     }
 }
 
+/**
+ * 非公平锁：线程饿死、效率高
+ * 公平锁：阳光普照、效率相对低
+ */
 class Ticket {
+    ReentrantLock lock = new ReentrantLock(true);
     private int number = 30;
-
-    ReentrantLock lock = new ReentrantLock();
 
     public synchronized void sale() {
         if (number > 0) {
