@@ -44,4 +44,29 @@
 
 ## 读写锁：
 一个资源可以被多个读线程访问，或者可以被一个写线程访问，但是不能同时存在读写线程，读写互斥，读读共享的
-![img.png](img/img.png)
+
+## 阻塞队列：
+![img.png](img/BlockingQueue.png)
+
+## 线程池七大核心参数
+````java 
+public ThreadPoolExecutor(int corePoolSize,
+int maximumPoolSize,
+long keepAliveTime,
+TimeUnit unit,
+BlockingQueue<Runnable> workQueue,
+ThreadFactory threadFactory,
+RejectedExecutionHandler handler)
+````
+corePoolSize 核心线程数
+maximumPoolSize 最大线程数
+keepAliveTime 存活时间
+unit 时间单位
+workQueue 工作队列
+threadFactory 线程工厂
+handler 拒绝策略
+## 线程池底层工作流程
+![Workflow.png](img/Workflow.png)
+
+## 线程池中的拒绝策略
+![img.png](img/DenialPolicy.png)
